@@ -1,0 +1,42 @@
+div {
+    width: 800px;
+    height: 400px;
+    margin: 0 auto;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+}
+
+svg {
+    width: 100%;
+    height: 90%;
+    margin: 0 auto;
+}
+
+p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: #dddddd;
+    border:#dddddd;
+}
+a {
+    color:#36454f;
+}
+
+button, p {    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 100%;
+    color:#36454f;
+    background: #dddddd;
+    border:#dddddd;
+    margin: 0 auto;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    text-align: center;
+    width: 100%;
+    height: 10%;
+}
+
+path, g {
+    fill: #36454f;
+    stroke:white;
+    
+}
