@@ -1,7 +1,9 @@
 # Super Map
 
 Place the cursor on a country or region. It will be highlighted and a corresponding name and code will appear in the lower bar.
-![screenshot1](https://user-images.githubusercontent.com/35288746/145026586-3f063a7d-e2e8-48fc-a2ca-2378246c998e.png)
+
+![demo1](https://user-images.githubusercontent.com/35288746/146560247-e598f80f-d73e-4998-811e-52b2a4d425b8.gif)
+
 
 ### Map origin
 
