@@ -1,5 +1,9 @@
 # Super Map
 
+This is the prototype of a game that will be made.
+
+## Instructions
+
 Place the cursor on a country or region. It will be highlighted and a corresponding name and code will appear in the lower bar.
 
 ![demo1](https://user-images.githubusercontent.com/35288746/146560247-e598f80f-d73e-4998-811e-52b2a4d425b8.gif)
