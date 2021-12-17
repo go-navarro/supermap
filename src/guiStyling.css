@@ -1,9 +1,24 @@
-div {
+.mainContainer {
     width: 800px;
     height: 400px;
     margin: 0 auto;
-    margin-left: 0 auto;
-    margin-right: 0 auto;
+    position:relative;
+}
+
+.leftDiv {
+    width: 15%;
+    height: 100%;
+    display: inline-block;
+    margin: 0 auto;
+    position:absolute;
+    left: 0;
+}
+
+.centerDiv {
+    width: 80%;
+    height: 100%;
+    display: inline-block;
+    margin-left: 15%;
 }
 
 svg {
@@ -12,11 +27,13 @@ svg {
     margin: 0 auto;
 }
 
-p {
+li {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background: #dddddd;
-    border:#dddddd;
+    background: white;
+    border:white;
+    color:#36454f;
 }
+
 a {
     color:#36454f;
 }
@@ -37,6 +54,17 @@ button, p {
 
 path, g {
     fill: #36454f;
-    stroke:white;
-    
+    stroke:white;    
+}
+
+br {
+    line-height:350%;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    background-color:#dddddd;
 }
