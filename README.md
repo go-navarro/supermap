@@ -9,6 +9,6 @@ Place the cursor on a country or region. It will be highlighted and a correspond
 
 The image is based on the map in "https://commons.wikimedia.org/wiki/File:BlankMap-World-Compact.svg" obtained 6:th of December 2021, which was released into the public domain.
 
-## Other
+### Other
 
 Certain regions which have their own codes in the maps do not appear as marked in the application. This will be fixed.
