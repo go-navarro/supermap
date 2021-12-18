@@ -11,15 +11,17 @@
     <div id="divMain" class="mainContainer">
         <div class="leftDiv">
             <br>
-            <li><a href="europeGame.html" id="isMap">Game Mode</a></li>
+            <li><a href="europeMap.html">Map Mode</a></li>
         </div>
 
         <div id="divMain" class="centerDiv">
-            <select id="upperBar">
-                <option>Europe</option>
-                <option>Africa</option>
-                <option>World</option>
-            </select>    
+            <div id="upperBar">
+                <select id="upperSelect">
+                    <option>Europe</option>
+                    <option>Africa</option>
+                    <option>World</option>
+                </select>
+            </div>
 
             <?xml version="1.0" encoding="UTF-8" standalone="no"?>
             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svg2985" viewBox="30 -10 300 550" width="2560"
@@ -189,22 +191,31 @@
                     </g>
                 </g>
             </svg>
-            <button id="lowerBar">Select region</button>
+            <button id="lowerBar">Play Game</button>
         </div>
     </div>
 </body>
 
+<script type="text/javascript" src="RandomNumberGeneration.js"></script>
 <script type="text/javascript" src="constants.js"></script>
 <script type="text/javascript" src="worldFun.js"></script>
+<script type="text/javascript" src="gameFunctions.js"></script>
 <script>
-    addCursorViewer(europeIds, regionInfo);
+    upperSelectRedirect();
+    var mapOptions = ["Europe", "Africa", "World"];
+
+    const europeSelection = ["ru", "dk", "is", "gb",
+    "pt", "es", "be", "it", "by", "pl", "gr",
+    "kz", "fi", "de", "se", "no", "md", "ua", 
+    "hr", "ie", "ch", "at", "cz", "sk", 
+    "hu", "lt", "lv", "ro", "bg", "ee", "lu", "fr",
+    "nl", "ba", "si", "rs", "mk", "al", "me", "cy"];
+
+    var lowerBar = document.getElementById("lowerBar");
+    lowerBar.addEventListener('click', lowerBarAction(mapOptions, europeSelection, europeIds));
+    lowerBar.innerText = "Play game?";
+    addRegionClickActions(europeSelection);
 </script>
 
-<script>
-    var mapSelection = document.getElementById("upperBar");
-    mapSelection.addEventListener('change', () => {
-        location.href = `${mapSelection.value}Map.html`;
-    });
-</script>
 
 </html>

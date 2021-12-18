@@ -5,7 +5,7 @@ const africaIds = ["mg", "sl", "gw", "mz", "mr", "ao", "gn", "ng", "tn",
     "eg", "ls", "bi", "dj", "cg", "rw", "sn", "tg", "mw", "ma", "lr", "cf",
     "zw", "bj", "sz", "gm"];
 
-const europeIds = ["ru", "dk", "gl", "fo", "is", "gb", "im", "gg", "je",
+const europeIds = ["ru", "dk", "fo", "is", "gb", "im", "je",
     "pt", "es", "be", "it", "va", "by", "pl", "gr", "tm", 
     "kz", "fi", "de", "se", "no", "md", "ua", 
     "hr", "ie", "ch", "at", "cz", "sk", 

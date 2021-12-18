@@ -5,21 +5,21 @@
     <link rel="stylesheet" href="guiStyling.css">
 </head>
 
-<title>Region viewer</title>
-
 <body>
     <div id="divMain" class="mainContainer">
         <div class="leftDiv">
             <br>
-            <li><a href="worldGame.html">Game Mode</a></li>
+            <li><a href="worldMap.html">Map Mode</a></li>
         </div>
 
         <div id="divMain" class="centerDiv">
-            <select id="upperBar">
-                <option>World</option>
-                <option>Africa</option>
-                <option>Europe</option>
-            </select>
+            <div id="upperBar">
+                <select id="upperSelect">
+                    <option>World</option>
+                    <option>Africa</option>
+                    <option>Europe</option>
+                </select>
+            </div>
 
             <?xml version="1.0" encoding="UTF-8"?>
             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svg2985"
@@ -4768,21 +4768,26 @@
                     <circle id="tk_" class="circlexx tk" r="6.01303" cy="840.579" cx="2708.51" />
                 </g>
             </svg>
-            <button id="lowerBar">Select region</button>
+            <button id="lowerBar"></button>
         </div>
     </div>
 
 </body>
+<script type="text/javascript" src="RandomNumberGeneration.js"></script>
 <script type="text/javascript" src="constants.js"></script>
 <script type="text/javascript" src="worldFun.js"></script>
+<script type="text/javascript" src="gameFunctions.js"></script>
 <script>
-    addCursorViewer(regionIds, regionInfo);
-</script>
-<script>
-    var mapSelection = document.getElementById("upperBar");
-    mapSelection.addEventListener('change', () => {
-        location.href = `${mapSelection.value}Map.html`;
-    });
+    upperSelectRedirect();
+    var mapOptions = ["World", "Africa", "Europe"];
+
+    var worldSelection = ["ph", "gb", "es", "kr", "cl", "lk",
+        "gr", "ec", "no", "ua", "us", "kz", "ru", "td"];
+
+    var lowerBar = document.getElementById("lowerBar");
+    lowerBar.addEventListener('click', lowerBarAction(mapOptions, worldSelection, regionIds));
+    lowerBar.innerText = "Play game?";
+    addRegionClickActions(worldSelection);
 </script>
 
 </html>

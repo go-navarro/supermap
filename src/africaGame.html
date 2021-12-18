@@ -11,15 +11,17 @@
     <div id="divMain" class="mainContainer">
         <div class="leftDiv">
             <br>
-            <li><a href="africaGame.html">Game Mode</a></li>
+            <li><a href="africaMap.html">Map mode</a></li>
         </div>
 
         <div id="divMain" class="centerDiv">
-            <select id="upperBar">
-                <option>Africa</option>
-                <option>Europe</option>
-                <option>World</option>
-            </select>    
+            <div id="upperBar">
+                <select id="upperSelect">
+                    <option>Africa</option>
+                    <option>World</option>
+                    <option>Europe</option>
+                </select>
+            </div>
 
             <?xml version="1.0" encoding="UTF-8"?>
             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svg2985" viewBox="-80 -80 1200 1200" width="2560"
@@ -419,17 +421,26 @@
 
 </body>
 
+<script type="text/javascript" src="RandomNumberGeneration.js"></script>
 <script type="text/javascript" src="constants.js"></script>
 <script type="text/javascript" src="worldFun.js"></script>
+<script type="text/javascript" src="gameFunctions.js"></script>
 <script>
-    addCursorViewer(africaIds, regionInfo);
+    upperSelectRedirect();
+    var mapOptions = ["World", "Africa", "Europe"];
+
+    var africaSelection = ["mg", "sl", "gw", "mz", "mr", "ao", "gn", "ng", "tn",
+    "tz", "gq", "ga", "er", 
+    "bf", "ly", "ci", "dz", "cm", "bw", "ke", "ml", "cd",
+    "so", "gh", "ug", "sd", "ss", "ne", "zm", "et", "eh", "td", "na", "za",
+    "eg", "ls", "bi", "dj", "cg", "rw", "sn", "tg", "mw", "ma", "lr", "cf",
+    "zw", "bj", "sz", "gm"];
+
+    var lowerBar = document.getElementById("lowerBar");
+    lowerBar.addEventListener('click', lowerBarAction(mapOptions, africaSelection, africaIds));
+    lowerBar.innerText = "Play game?";
+    addRegionClickActions(africaSelection);
 </script>
 
-<script>
-    var mapSelection = document.getElementById("upperBar");
-    mapSelection.addEventListener('change', () => {
-        location.href = `${mapSelection.value}Map.html`;
-    });
-</script>
 
 </html>

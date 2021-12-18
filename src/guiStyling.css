@@ -1,6 +1,6 @@
 .mainContainer {
-    width: 800px;
-    height: 400px;
+    width: 1000px;
+    height: 500px;
     margin: 0 auto;
     position:relative;
 }
@@ -52,10 +52,21 @@ button, p {
     height: 10%;
 }
 
-path, g {
-    fill: #36454f;
-    stroke:white;    
+select {    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 100%;
+    color:#36454f;
+    background: #dddddd;
+    border:#dddddd;
+    margin: 0 auto;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    text-align: center;
+    width: 100%;
+    height: 10%;
 }
+
+
 
 br {
     line-height:350%;
@@ -67,4 +78,9 @@ a {
 
 a:hover {
     background-color:#dddddd;
+}
+
+path, g {
+    fill: #36454f;
+    stroke:white;
 }
