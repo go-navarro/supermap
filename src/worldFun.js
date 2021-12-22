@@ -1,7 +1,7 @@
 const highlightDuration = 300;
 const highlightColor = "#dddddd";
 const segmentColor = "#36454f";
-const nameSpace = "http://www.w3.org/2000/svg";
+var nameSpace = "http://www.w3.org/2000/svg";
 
 function getRegionName(regionCode, regionInfo) {
     var regionName = regionInfo[regionCode];
@@ -13,6 +13,7 @@ function getRegionName(regionCode, regionInfo) {
 
 function addCursorViewer(regionIds, regionInfo) {
     for (let j = 0; j < regionIds.length; j++) {
+
         var regionElement = document.getElementById(regionIds[j]);
         var regionName = getRegionName(regionIds[j], regionInfo);
         regionElement.addEventListener("mouseover", changeSegmentColorAction(regionIds[j], regionName, highlightColor));
